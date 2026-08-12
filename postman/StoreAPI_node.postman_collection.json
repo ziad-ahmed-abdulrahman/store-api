@@ -1,0 +1,1167 @@
+{
+  "info": {
+    "_postman_id": "288f6a13-9154-4ae5-80c8-b53ea93d6424",
+    "name": "StoreAPI_node",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50243565",
+    "_collection_link": "https://go.postman.co/collection/50243565-288f6a13-9154-4ae5-80c8-b53ea93d6424?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "categories",
+      "item": [
+        {
+          "name": "get all categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/categories/",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/categories/6a7534f191951959103b9a4a",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a7534f191951959103b9a4a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add single category",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \" version\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/categories/",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit single category",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"ziad\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/categories/6a7534f191951959103b9a4a",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a7534f191951959103b9a4a"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete single category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/categories/6a752e9e5b8b96c1a707ddc5",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6a752e9e5b8b96c1a707ddc5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/products?search=iphone&category=6a752ce503a301c017eafe54&page=1&limit=10&sort=name",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "iphone"
+                },
+                {
+                  "key": "category",
+                  "value": "6a752ce503a301c017eafe54"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "sort",
+                  "value": "name"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/products/6a776c28e53eb34fa81562f4",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a776c28e53eb34fa81562f4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add single product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "iPhone 16",
+                  "type": "text",
+                  "uuid": "c748c133-a575-41f1-adf5-4c8c5a99e68c"
+                },
+                {
+                  "key": "description",
+                  "value": "Latest Apple smartphone",
+                  "type": "text",
+                  "uuid": "9e938a02-cf10-4e20-8eed-39109bc9d326"
+                },
+                {
+                  "key": "price",
+                  "value": "70000",
+                  "type": "text",
+                  "uuid": "acaa5be1-7ff7-435c-937c-0223b316f155"
+                },
+                {
+                  "key": "category",
+                  "value": "6a752ce503a301c017eafe54",
+                  "type": "text",
+                  "uuid": "8c6ef529-b674-40c4-8a90-ac7243560392"
+                },
+                {
+                  "key": "brand",
+                  "value": "Apple",
+                  "type": "text",
+                  "uuid": "d97359b1-166b-412e-a918-eadaf0330e97"
+                },
+                {
+                  "key": "countInStock",
+                  "value": "20",
+                  "type": "text",
+                  "uuid": "e9a475f8-88df-44e9-b856-462ae54e6a11"
+                },
+                {
+                  "key": "images",
+                  "type": "file",
+                  "uuid": "f11ff99c-290e-4f65-b842-7213a758b121",
+                  "src": "postman-cloud:///1f193292-e493-4d50-b7d2-61ac255b1641"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/products/",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit single product",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n     \"name\": \"test\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/products/6a761a6a2a1f2a82b5b304b7",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a761a6a2a1f2a82b5b304b7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete single product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/products/6a7727e129b052e77367c5b7",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "products",
+                "6a7727e129b052e77367c5b7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Ziad\",\r\n  \"lastName\": \"For Test\",\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"password\": \"{{test_user_pass}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/register",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "send activation code",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/send-activation-code",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "send-activation-code"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "activate account",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"code\": \"947193\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/activate",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "activate"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "pm.environment.set(\"token\", response.data.token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"password\": \"{{test_user_pass}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/login",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "send forget password code",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/send-forget-password-code",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "send-forget-password-code"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reset password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"newPassword\": \"{{test_user_new_pass}}\",\r\n   \"code\": \"380262\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/auth/reset-password",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "reset-password"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "get my profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/me",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update my profile",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"ziad\",\r\n  \"lastName\": \"after update\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/me",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete my account",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"code\": \"947193\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/me",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "change my password",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"oldPassword\": \"{{test_user_pass}}\",\r\n    \"newPassword\": \"NewPassword@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/me/change-password",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "me",
+                "change-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all users",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const response = pm.response.json();\r",
+                  "\r",
+                  "pm.environment.set(\"token\", response.data.token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"password\": \"{{test_user_pass}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users?search=ahmed&role=user&isActive=true&page=1&limit=10&sort=firstName",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "ahmed"
+                },
+                {
+                  "key": "role",
+                  "value": "user"
+                },
+                {
+                  "key": "isActive",
+                  "value": "true"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                },
+                {
+                  "key": "sort",
+                  "value": "firstName"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"ziad\",\r\n    \"lastName\": \"after delete\",\r\n    \"email\": \"{{test_user_email}}\",\r\n    \"password\": \"{{test_user_pass}}\",\r\n    \"role\": \"user\",\r\n    \"isVerified\": true\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{test_user_email}}\",\r\n  \"newPassword\": \"{{test_user_new_pass}}\",\r\n   \"code\": \"769218\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/6a78d81efd406da37769ca36",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a78d81efd406da37769ca36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Ahmed\",\r\n    \"lastName\": \"ziad\",\r\n    \"role\": \"user\",\r\n    \"isVerified\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/6a78d81efd406da37769ca36",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a78d81efd406da37769ca36"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\": \"Ahmed\",\r\n    \"lastNameName\": \"ziad\",\r\n    \"password\": \"Ahmed@123456\",\r\n    \"role\": \"user\",\r\n    \"isVerified\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/users/6a78f24e44ea5502e8a98b95",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "users",
+                "6a78f24e44ea5502e8a98b95"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "carts",
+      "item": [
+        {
+          "name": "get cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/cart",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "cart"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add item to cart",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6a77f1728720d55bee58b530\",\r\n    \"quantity\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/cart/items",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update cart item",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"productId\": \"6a77f1728720d55bee58b530\",\r\n    \"quantity\": 14\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/cart/items",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove cart item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/cart/items/6a77f1728720d55bee58b530",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "cart",
+                "items",
+                "6a77f1728720d55bee58b530"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"shippingAddress\": \"Zagazig, Sharqia, Egypt\",\r\n    \"phoneNumber\": \"01012345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseurl}}/api/orders",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get My Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/me",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Single Order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/me/6a7b82b33735432a04886262",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "me",
+                "6a7b82b33735432a04886262"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pay Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/6a7b870150b89face00c1457/pay",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "6a7b870150b89face00c1457",
+                "pay"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel Order",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/6a7b82b33735432a04886262/cancel",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "6a7b82b33735432a04886262",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Paymob Webhook",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/paymob/webhook",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "paymob",
+                "webhook"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Orders (Admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders?page=1&limit=5&status=paid&sort=-createdAt\n",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                },
+                {
+                  "key": "status",
+                  "value": "paid"
+                },
+                {
+                  "key": "sort",
+                  "value": "-createdAt\n"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single order (admin)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseurl}}/api/orders/6a7b870150b89face00c1457",
+              "host": [
+                "{{baseurl}}"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "6a7b870150b89face00c1457"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
